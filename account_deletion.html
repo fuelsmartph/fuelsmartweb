@@ -28,6 +28,28 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .wrap { max-width: 980px; margin: 0 auto; padding: 32px 16px 56px; }
+    
+    /* Navigation Header Styling from Privacy.html */
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+    .top a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+    }
+    .top a:hover {
+      border-color: var(--border);
+      background: rgba(255,255,255,0.04);
+      text-decoration: none;
+    }
+
     header { margin-bottom: 18px; }
     h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: 0.2px; }
     .subtitle { color: var(--muted); margin: 0; font-size: 14px; }
@@ -94,6 +116,13 @@
 </head>
 <body>
   <div class="wrap">
+    <header class="top">
+      <a href="./index.html">← Back to Home</a>
+      <div>
+        <a href="./privacy.html">Privacy Policy</a>
+      </div>
+    </header>
+
     <header>
       <h1>Fuel Smart – Account &amp; Data Deletion Request</h1>
       <p class="subtitle">Last updated: March 11, 2026 • Contact: <a href="mailto:fuelsmartph@gmail.com">fuelsmartph@gmail.com</a></p>
@@ -124,13 +153,12 @@
 
         <div class="warn">
           <strong>Note:</strong> If the embedded form below doesn’t load on some browsers, please use “Open the form in a new tab”.
-          For best embedding support, you can replace the iframe URL with the official Google Forms <code>embedded=true</code> link (Google Form → Send → &lt;&gt; Embed).
         </div>
       </section>
 
       <section class="card">
         <div class="pill">Embedded request form</div>
-        <p class="note" style="margin-top: 0">Form link: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdoa1d3_IP4i8WPzUm52c0BsDceKNA61EwTo25_wfm_z0zbcw/viewform?usp=publish-editor" target="_blank" rel="noopener">https://docs.google.com/forms/d/e/1FAIpQLSdoa1d3_IP4i8WPzUm52c0BsDceKNA61EwTo25_wfm_z0zbcw/viewform?usp=publish-editor</a></p>
+        <p class="note" style="margin-top: 0">Form link: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdoa1d3_IP4i8WPzUm52c0BsDceKNA61EwTo25_wfm_z0zbcw/viewform?usp=publish-editor" target="_blank" rel="noopener">Google Form</a></p>
 
         <div class="iframe-wrap">
           <iframe
