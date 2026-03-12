@@ -1,5 +1,5 @@
-https://account-deletion.fuelsmartph.workers.dev/
+https://home.fuelsmartph.workers.dev/
 
-Terms and Conditions: https://account-deletion.fuelsmartph.workers.dev/terms
+Terms and Conditions: https://home.fuelsmartph.workers.dev/terms
 
-Privacy Policy: https://account-deletion.fuelsmartph.workers.dev/privacy
+Privacy Policy: https://home.fuelsmartph.workers.dev/privacy
