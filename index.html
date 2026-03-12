@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fuel Smart</title>
+  <style>
+    :root{
+      --bg:#0b1220; --card:#121a2b; --text:#e7eefc; --muted:#a9b6d3;
+      --brand:#4da3ff; --border:rgba(255,255,255,.12);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:radial-gradient(1200px 700px at 20% 10%, #15203a 0%, var(--bg) 55%);
+      color:var(--text);
+    }
+    .wrap{max-width:980px; margin:0 auto; padding:48px 20px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:28px}
+    .logo{
+      font-weight:800; letter-spacing:.4px; font-size:22px; display:flex; align-items:center; gap:10px;
+    }
+    .dot{width:10px; height:10px; border-radius:999px; background:var(--brand); box-shadow:0 0 18px var(--brand)}
+    nav a{
+      color:var(--text); text-decoration:none; padding:10px 12px; border-radius:10px;
+      border:1px solid transparent;
+    }
+    nav a:hover{border-color:var(--border); background:rgba(255,255,255,.04)}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:22px;
+    }
+    h1{margin:0 0 8px; font-size:34px}
+    p{margin:0 0 14px; color:var(--muted); line-height:1.6}
+    .links{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:12px;
+      background:rgba(77,163,255,.12);
+      border:1px solid rgba(77,163,255,.28);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:600;
+    }
+    .btn:hover{background:rgba(77,163,255,.18)}
+    footer{margin-top:18px; color:var(--muted); font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo"><span class="dot"></span>Fuel Smart</div>
+      <nav>
+        <a href="./terms.html">Terms &amp; Conditions</a>
+        <a href="./privacy.html">Privacy Policy</a>
+      </nav>
+    </header>
+
+    <main class="card">
+      <h1>Welcome to Fuel Smart</h1>
+      <p>
+        Fuel Smart helps you discover fuel stations, compare fuel prices, and contribute updates to improve data quality.
+      </p>
+      <p>
+        Please review our Terms &amp; Conditions and Privacy Policy to understand how the app works and how information is handled.
+      </p>
+
+      <div class="links">
+        <a class="btn" href="./terms.html">Read Terms &amp; Conditions</a>
+        <a class="btn" href="./privacy.html">Read Privacy Policy</a>
+      </div>
+
+      <footer>
+        © <span id="year"></span> Fuel Smart
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
