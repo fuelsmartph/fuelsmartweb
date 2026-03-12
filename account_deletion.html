@@ -29,7 +29,6 @@
     a:hover { text-decoration: underline; }
     .wrap { max-width: 980px; margin: 0 auto; padding: 32px 16px 56px; }
     
-    /* Navigation Header Styling from Privacy.html */
     .top {
       display: flex;
       align-items: center;
@@ -50,130 +49,89 @@
       text-decoration: none;
     }
 
-    header { margin-bottom: 18px; }
+    header { margin-bottom: 24px; }
     h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: 0.2px; }
     .subtitle { color: var(--muted); margin: 0; font-size: 14px; }
-    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
-    @media (min-width: 900px) { .grid { grid-template-columns: 0.95fr 1.05fr; } }
+    
     .card {
       background: rgba(17,27,46,0.92);
       border: 1px solid var(--border);
       border-radius: 18px;
       box-shadow: var(--shadow);
-      padding: 18px 18px;
+      padding: 32px;
       backdrop-filter: blur(8px);
+      max-width: 700px;
+      margin: 0 auto;
     }
     .pill {
-      display: inline-block; padding: 6px 10px; border-radius: 999px;
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
       border: 1px solid var(--border); color: var(--muted);
-      font-size: 12px; margin-bottom: 10px;
+      font-size: 12px; margin-bottom: 16px;
     }
-    ul { margin: 10px 0 0 20px; padding: 0; color: var(--muted); }
-    li { margin: 6px 0; }
-    .note { color: var(--muted); font-size: 13px; }
-    .cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+    ul { margin: 16px 0; padding: 0 0 0 20px; color: var(--muted); }
+    li { margin: 8px 0; }
+    .email-box {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 14px;
+      text-align: center;
+      margin: 24px 0;
+      border: 1px dashed var(--border);
+    }
+    code {
+      font-size: 20px;
+      color: var(--accent);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
     .btn {
-      display: inline-block;
+      display: block;
       background: var(--accent);
       color: #061023;
       font-weight: 800;
-      padding: 10px 14px;
+      padding: 14px 20px;
       border-radius: 12px;
       border: 0;
+      text-align: center;
+      text-decoration: none;
+      transition: opacity 0.2s;
     }
-    .btn.secondary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-      font-weight: 700;
-    }
-    .iframe-wrap {
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      overflow: hidden;
-      background: rgba(0,0,0,0.15);
-      height: 760px;
-    }
-    iframe { width: 100%; height: 100%; border: 0; }
-    .warn {
-      margin-top: 10px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255, 193, 7, 0.08);
-      color: var(--muted);
-      font-size: 13px;
-    }
-    footer { margin-top: 18px; color: var(--muted); font-size: 12px; }
-    code {
-      background: rgba(255,255,255,0.06);
-      padding: 2px 6px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.08);
-      color: var(--text);
-    }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    footer { margin-top: 32px; color: var(--muted); font-size: 13px; text-align: center; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header class="top">
       <a href="./index.html">← Back to Home</a>
-      <div>
-        <a href="./privacy.html">Privacy Policy</a>
+      <a href="./privacy.html">Privacy Policy</a>
+    </header>
+
+    <main class="card">
+      <div class="pill">Account Deletion Request</div>
+      <header>
+        <h1>How to Delete Your Data</h1>
+        <p class="subtitle">Last updated: March 11, 2026</p>
+      </header>
+
+      <p>To delete your <strong>Fuel Smart</strong> account and all associated personal data, please send an email request from your registered email address to:</p>
+
+      <div class="email-box">
+        <code>fuelsmartph@gmail.com</code>
       </div>
-    </header>
 
-    <header>
-      <h1>Fuel Smart – Account &amp; Data Deletion Request</h1>
-      <p class="subtitle">Last updated: March 11, 2026 • Contact: <a href="mailto:fuelsmartph@gmail.com">fuelsmartph@gmail.com</a></p>
-    </header>
+      <p>Please use <strong>"Account Deletion Request"</strong> as the subject line. Once we receive your email, we will verify your identity and process the deletion of the following:</p>
+      
+      <ul>
+        <li>Your account profile (full name and email).</li>
+        <li>Reason for deletion(optional)</li>
+      </ul>
 
-    <div class="grid">
-      <section class="card">
-        <div class="pill">Web deletion request link (for Play Store compliance)</div>
-        <p class="note">
-          If you would like to delete your <strong>Fuel Smart</strong> account and associated data, submit the request using the form on this page.
-          You may also email us at <a href="mailto:fuelsmartph@gmail.com">fuelsmartph@gmail.com</a>.
-        </p>
+      <p style="font-size: 13px; color: var(--muted);"><em>Note: Contributions to fuel station data may be retained in an anonymized format to maintain the accuracy of the crowdsourced map for other users.</em></p>
 
-        <h2 style="margin: 12px 0 8px; font-size: 18px;">What we delete</h2>
-        <ul>
-          <li>Your account profile information (such as name/display preferences and optional tip/donation details).</li>
-          <li>Your access to the app will be removed after deletion is processed.</li>
-          <li>Some contribution history may be retained in an anonymized form to protect data integrity and prevent abuse (where applicable).</li>
-        </ul>
-
-        <h2 style="margin: 14px 0 8px; font-size: 18px;">Processing time</h2>
-        <p class="note">We aim to process deletion requests within a reasonable time after verifying the request.</p>
-
-        <div class="cta-row">
-          <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdoa1d3_IP4i8WPzUm52c0BsDceKNA61EwTo25_wfm_z0zbcw/viewform?usp=publish-editor" target="_blank" rel="noopener">Open the form in a new tab</a>
-          <a class="btn secondary" href="mailto:fuelsmartph@gmail.com?subject=Fuel Smart%20Account%20Deletion%20Request">Email us instead</a>
-        </div>
-
-        <div class="warn">
-          <strong>Note:</strong> If the embedded form below doesn’t load on some browsers, please use “Open the form in a new tab”.
-        </div>
-      </section>
-
-      <section class="card">
-        <div class="pill">Embedded request form</div>
-        <p class="note" style="margin-top: 0">Form link: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdoa1d3_IP4i8WPzUm52c0BsDceKNA61EwTo25_wfm_z0zbcw/viewform?usp=publish-editor" target="_blank" rel="noopener">Google Form</a></p>
-
-        <div class="iframe-wrap">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdoa1d3_IP4i8WPzUm52c0BsDceKNA61EwTo25_wfm_z0zbcw/viewform?usp=publish-editor"
-            title="Fuel Smart Account Deletion Request Form"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-
-        <p class="note" style="margin-top: 10px;">
-          If you prefer, email <a href="mailto:fuelsmartph@gmail.com">fuelsmartph@gmail.com</a> with your account email and request details.
-        </p>
-      </section>
-    </div>
+      <a class="btn" href="mailto:fuelsmartph@gmail.com?subject=Account Deletion Request&body=I would like to request the permanent deletion of my Fuel Smart account and all associated data. My registered email is: ">
+        Send Deletion Email Now
+      </a>
+    </main>
 
     <footer>
       <p>© 2026 Fuel Smart. Contact: <a href="mailto:fuelsmartph@gmail.com">fuelsmartph@gmail.com</a></p>
